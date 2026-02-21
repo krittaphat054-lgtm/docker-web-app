@@ -1,0 +1,27 @@
+name: CI/CD Docker Pipeline
+
+# สั่งให้หุ่นยนต์ทำงานทุกครั้งที่เรา push โค้ดเข้า branch ที่ชื่อว่า main
+on:
+  push:
+    branches: [ "main", "master" ]
+
+jobs:
+  build-and-push:
+    runs-on: ubuntu-latest # ให้หุ่นยนต์ยืมเครื่องเซิร์ฟเวอร์ Linux ของ GitHub มาทำงาน
+
+    steps:
+      - name: 1. ดึงโค้ดล่าสุดจาก GitHub มาที่เซิร์ฟเวอร์
+        uses: actions/checkout@v3
+
+      - name: 2. ล็อกอินเข้า Docker Hub โดยใช้กุญแจในตู้เซฟ
+        uses: docker/login-action@v2
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_PASSWORD }}
+
+      - name: 3. สั่ง Build Image และ Push ขึ้น Docker Hub อัตโนมัติ!
+        uses: docker/build-push-action@v4
+        with:
+          context: .
+          push: true
+          tags: krittaphat054/my-first-webapp:latest
