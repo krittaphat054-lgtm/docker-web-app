@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  # 1. Container สำหรับรันฐานข้อมูล Redis
+  my-database:
+    image: 'redis:alpine'
+
+  # 2. Container สำหรับรันเว็บแอปพลิเคชันของเรา
+  web-app:
+    build: .
+    ports:
+      - "8081:3000" # เปลี่ยนมาใช้พอร์ต 8081 แทน เพื่อป้องกันการชนกับของเก่า
+    depends_on:
+      - my-database # สั่งให้รอ Database ทำงานก่อน ค่อยรันเว็บ
