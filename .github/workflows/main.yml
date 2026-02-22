@@ -22,6 +22,11 @@ jobs:
       - name: 1.6. ติดตั้งเครื่องมือ (Dependencies)
         run: npm install
         
+      # --- แทรกสเตปนี้เข้าไปเพื่อปลดล็อกสิทธิ์ใน Linux ---
+      - name: 1.6.5. ปลดล็อกสิทธิ์ (Fix Windows-to-Linux Permission)
+        run: chmod +x ./node_modules/.bin/jest
+      # -----------------------------------------------
+        
       - name: 1.7. รัน Automated Test (ถ้าพัง หุ่นยนต์จะหยุดทำงานทันที!)
         run: npm test
       # -----------------------------------------------
