@@ -1,4 +1,4 @@
-# 🚀 End-to-End DevOps Pipeline: Kubernetes & CI/CD
+<img width="1054" height="841" alt="Screenshot 2026-02-22 151839" src="https://github.com/user-attachments/assets/523713d6-dff8-49a8-a44f-0fb5c63f9051" /># 🚀 End-to-End DevOps Pipeline: Kubernetes & CI/CD
 ![Project Status](https://img.shields.io/badge/Status-Completed-success)
 ![Kubernetes](https://img.shields.io/badge/Kubernetes-Ready-blue)
 ![CI/CD](https://img.shields.io/badge/GitHub_Actions-Automated-green)
@@ -19,7 +19,8 @@
 4. **Automated CI/CD:** ทันทีที่มีการ Push Code ใหม่ขึ้น Repository GitHub Actions จะทำการ Build และอัปโหลด Image ใหม่เตรียมพร้อมสำหรับการ Deploy ทันที
 
 ## 📸 ภาพผลลัพธ์การทำงาน
-*(คุณสามารถลากรูปภาพหน้าเว็บสีม่วงสวยๆ ของคุณมาปล่อยในบรรทัดนี้ได้เลยตอนที่อยู่บนเว็บ GitHub เพื่อให้มันโชว์รูปครับ)*
+<img width="1054" height="841" alt="Screenshot 2026-02-22 151839" src="https://github.com/user-attachments/assets/b94d77bc-5934-4a79-b698-c0f8b0bb1be8" />
+
 
 ## 🛠️ โครงสร้างไฟล์ในโปรเจกต์
 - `server.js` - โค้ดฝั่งแอปพลิเคชันและหน้าเว็บ
