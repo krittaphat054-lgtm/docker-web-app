@@ -1,4 +1,4 @@
-<img width="1054" height="841" alt="Screenshot 2026-02-22 151839" src="https://github.com/user-attachments/assets/523713d6-dff8-49a8-a44f-0fb5c63f9051" /># 🚀 End-to-End DevOps Pipeline: Kubernetes & CI/CD
+# 🚀 End-to-End DevOps Pipeline: Kubernetes & CI/CD
 ![Project Status](https://img.shields.io/badge/Status-Completed-success)
 ![Kubernetes](https://img.shields.io/badge/Kubernetes-Ready-blue)
 ![CI/CD](https://img.shields.io/badge/GitHub_Actions-Automated-green)
