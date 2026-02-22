@@ -112,6 +112,12 @@ app.get('/', async (req, res) => {
     `);
     // ------------------------------------------
 });
+// ช่องทางสำหรับให้ Automated Test ตรวจสอบว่าเว็บยังไม่ล่ม
+app.get('/health', (req, res) => {
+    res.status(200).send('OK');
+});
+
+module.exports = app; // เพิ่มบรรทัดนี้เพื่อให้ไฟล์เทสต์ดึงแอปไปเช็กได้
 
 app.listen(port, () => {
     console.log(`WebApp listening at http://localhost:${port}`);
