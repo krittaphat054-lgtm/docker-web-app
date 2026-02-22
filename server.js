@@ -15,7 +15,7 @@ app.get('/', async (req, res) => {
   try {
     // ให้ Database ช่วยบวกเลข เพิ่มจำนวนคนเข้าชม 1 ครั้ง
     const visits = await client.incr('visits');
-    res.send(`<h1>Hello DevOps V2! ระบบ CI/CD ทำงานแล้ว!</h1><h2>มีคนเข้าชมเว็บนี้ ${visits} ครั้งแล้ว!</h2><p>(ข้อมูลถูกนับและเก็บไว้ใน Redis Database)</p>`);
+    res.send(`<h1>Hello DevOps V3 อัปเดตผ่าน CI/CD ลง Kubernetes สำเร็จ</h1><h2>มีคนเข้าชมเว็บนี้ ${visits} ครั้งแล้ว!</h2><p>(ข้อมูลถูกนับและเก็บไว้ใน Redis Database)</p>`);
   } catch (error) {
     res.send('<h1>กำลังเชื่อมต่อ Database... ลองรีเฟรชหน้าเว็บอีกครั้ง</h1>');
   }

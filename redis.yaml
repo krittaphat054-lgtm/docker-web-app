@@ -1,0 +1,33 @@
+# 1. ส่วนนี้สั่งรัน Redis 1 ตัว
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: redis-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: redis
+  template:
+    metadata:
+      labels:
+        app: redis
+    spec:
+      containers:
+      - name: redis
+        image: redis:alpine
+        ports:
+        - containerPort: 6379
+
+---
+# 2. ส่วนนี้สร้างสมุดหน้าเหลืองชื่อ "my-database" เพื่อให้เว็บวิ่งมาหาถูก
+apiVersion: v1
+kind: Service
+metadata:
+  name: my-database  # <--- ชื่อนี้สำคัญมาก! ต้องตรงกับโค้ด server.js ของเรา
+spec:
+  selector:
+    app: redis
+  ports:
+  - port: 6379
+    targetPort: 6379
